@@ -104,10 +104,11 @@ if __name__ == '__main__':
 
   # get label paths
   label_names = []
-  for sequence in sequence:
-    sequence = '{0:02d}'.format(int(sequence))
-    label_paths = os.path.join(root_directory, "sequences",
-                               sequence, label_directory)
+  for sequence in os.listdir(root_directory):
+    sequence = '{0:03d}'.format(int(sequence))
+    label_paths = os.path.join(root_directory,
+                               sequence)
+    print(label_paths)
     # populate the label names
     seq_label_names = [os.path.join(dp, f) for dp, dn, fn in os.walk(
         os.path.expanduser(label_paths)) for f in fn if ".label" in f]

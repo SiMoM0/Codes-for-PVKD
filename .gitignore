@@ -1,0 +1,10 @@
+# pycache
+__pycache__/
+
+# predictions
+out_cyl/
+pvkd_predictions/
+test_pred/
+
+# models
+cyl_sem_*
